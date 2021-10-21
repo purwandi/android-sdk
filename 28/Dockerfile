@@ -1,4 +1,4 @@
-FROM androidsdk/android-30
+FROM androidsdk/android-28
 
 RUN yes | sdkmanager \
     "build-tools;28.0.3" \
