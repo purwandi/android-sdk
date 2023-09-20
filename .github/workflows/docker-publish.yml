@@ -30,11 +30,12 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: 33
+          context: 33/
           file: 33/Dockerfile
           push: true
           tags: purwandi/${{ env.IMAGE_NAME }}:33
           labels: ${{ steps.meta.outputs.labels }}
+          
   # build-31:
   #   runs-on: ubuntu-latest
   #   permissions:
