@@ -27,5 +27,10 @@ WORKDIR /opt/android-sdk-linux
 COPY tools /opt/tools
 COPY licenses /opt/licenses
 
+RUN chmod +x /opt/tools/android-accept-licenses.sh
+RUN chmod +x /opt/tools/android-env.sh
+RUN chmod +x /opt/tools/android-sdk-update.sh
+RUN chmod +x /opt/tools/entrypoint.sh
+
 RUN /opt/tools/entrypoint.sh built-in
 # RUN sdkmanager --list_installed
