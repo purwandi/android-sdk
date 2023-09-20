@@ -20,7 +20,7 @@ env:
   IMAGE_NAME: android-sdk
 
 jobs:
-  build-31:
+  build-33:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -36,74 +36,95 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: .
-          file: 31/Dockerfile
+          context: 33
+          file: 33/Dockerfile
           push: true
-          tags: purwandi/${{ env.IMAGE_NAME }}:31
+          tags: purwandi/${{ env.IMAGE_NAME }}:33
           labels: ${{ steps.meta.outputs.labels }}
+  # build-31:
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #     packages: write
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v2
+  #     - name: Log into registry
+  #       uses: docker/login-action@v1 
+  #       with:
+  #         username: ${{ secrets.DOCKER_USERNAME }}
+  #         password: ${{ secrets.DOCKER_TOKEN }}
+  #     - name: Build and push Docker image
+  #       uses: docker/build-push-action@v2
+  #       with:
+  #         context: .
+  #         file: 31/Dockerfile
+  #         push: true
+  #         tags: purwandi/${{ env.IMAGE_NAME }}:31
+  #         labels: ${{ steps.meta.outputs.labels }}
 
-  build-30:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Log into registry
-        uses: docker/login-action@v1 
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_TOKEN }}
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          file: 30/Dockerfile
-          push: true
-          tags: purwandi/${{ env.IMAGE_NAME }}:30
-          labels: ${{ steps.meta.outputs.labels }}
+  # build-30:
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #     packages: write
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v2
+  #     - name: Log into registry
+  #       uses: docker/login-action@v1 
+  #       with:
+  #         username: ${{ secrets.DOCKER_USERNAME }}
+  #         password: ${{ secrets.DOCKER_TOKEN }}
+  #     - name: Build and push Docker image
+  #       uses: docker/build-push-action@v2
+  #       with:
+  #         context: .
+  #         file: 30/Dockerfile
+  #         push: true
+  #         tags: purwandi/${{ env.IMAGE_NAME }}:30
+  #         labels: ${{ steps.meta.outputs.labels }}
 
-  build-29:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Log into registry
-        uses: docker/login-action@v1 
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_TOKEN }}
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          file: 29/Dockerfile
-          push: true
-          tags: purwandi/${{ env.IMAGE_NAME }}:29
-          labels: ${{ steps.meta.outputs.labels }}
+  # build-29:
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #     packages: write
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v2
+  #     - name: Log into registry
+  #       uses: docker/login-action@v1 
+  #       with:
+  #         username: ${{ secrets.DOCKER_USERNAME }}
+  #         password: ${{ secrets.DOCKER_TOKEN }}
+  #     - name: Build and push Docker image
+  #       uses: docker/build-push-action@v2
+  #       with:
+  #         context: .
+  #         file: 29/Dockerfile
+  #         push: true
+  #         tags: purwandi/${{ env.IMAGE_NAME }}:29
+  #         labels: ${{ steps.meta.outputs.labels }}
 
-  build-28:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Log into registry
-        uses: docker/login-action@v1 
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_TOKEN }}
-      - name: Build and push Docker image 
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          file: 28/Dockerfile
-          push: true
-          tags: purwandi/${{ env.IMAGE_NAME }}:28
-          labels: ${{ steps.meta.outputs.labels }}
+  # build-28:
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #     packages: write
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v2
+  #     - name: Log into registry
+  #       uses: docker/login-action@v1 
+  #       with:
+  #         username: ${{ secrets.DOCKER_USERNAME }}
+  #         password: ${{ secrets.DOCKER_TOKEN }}
+  #     - name: Build and push Docker image 
+  #       uses: docker/build-push-action@v2
+  #       with:
+  #         context: .
+  #         file: 28/Dockerfile
+  #         push: true
+  #         tags: purwandi/${{ env.IMAGE_NAME }}:28
+  #         labels: ${{ steps.meta.outputs.labels }}
