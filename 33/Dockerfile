@@ -34,4 +34,3 @@ RUN chmod +x /opt/tools/entrypoint.sh
 
 RUN /opt/tools/entrypoint.sh built-in
 RUN sdkmanager "build-tools;33.0.2" "cmake;3.22.1" "ndk;23.1.7779620" "platforms;android-33" "cmdline-tools;latest"
-RUN sdkmanager --list
