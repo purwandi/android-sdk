@@ -13,9 +13,7 @@ extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2
 extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2
 ndk-bundle
 ndk;23.1.7779620
-platforms;android-32
 platforms;android-33
 platform-tools
-system-images;android-32;google_apis;x86_64
 system-images;android-33;google_apis;x86_64
 tools
